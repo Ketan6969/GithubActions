@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
     build: 
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         strategy:
             matrix:
                 python-version: ["3.9","3.12"]
@@ -22,4 +22,4 @@ jobs:
             - name: running the python app
               run: |
                 cd src    
-                python addition.py
+                python addition.py                  
